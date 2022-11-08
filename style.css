@@ -1,0 +1,310 @@
+:root {
+    --main-radius:5px;
+    --main-padding:5px;
+    font-family: 'Montserrat', sans-serif;
+    --color-primary:#357470;
+    --color-secondary: #91BFBC;
+    --color-tertiary: linear-gradient(125.94deg, #357470 12.32%, #91BFBC 84.03%);
+    --color-Quat: #2B3433;
+    --text-color: #2B3433;
+    box-sizing: border-box;
+}
+
+p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+/* ---------- Primary Container ---------- */
+.Container {
+    display:grid;
+    width: 100vw;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: auto 2fr 2fr auto auto;
+    grid-template-areas:
+    "Sidebar Header Header Header" 
+    "Sidebar Main Main Main"
+    "Sidebar Main Main Main"
+    "Sidebar Content1 Content2 Content3"
+    "Sidebar Footer Footer Footer";
+    grid-gap: 0.2rem;
+    color:white;
+}
+
+/* ---------Header-------- */
+header {
+    grid-area:Header;
+    background:var(--color-Quat);
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* ----Navigation Menu----- */
+nav {
+    display: flex;
+    justify-content: right;
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+ul.NavMenu {
+    display: flex;
+    flex-direction: row;
+}
+nav li {
+    list-style: none;
+    margin: 5px;
+}
+
+/* -----Nav interactivity----- */
+nav li:hover {
+    background: black;
+    opacity: 0.6;
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+.DogPage a.mydoglink {
+    background: var(--color-primary);
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+.CareerPage a.careerlink {
+    background: var(--color-primary);
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+.EducationPage a.educationlink {
+    background: var(--color-primary);
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+.index a.homelink {
+    background: var(--color-primary);
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+.PortfolioPage a.portfoliolink {
+    background: var(--color-primary);
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+/* ----- Main content area ---- */
+main{
+    grid-area:Main;
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-primary);
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+
+}
+
+Ul.Education,
+Ul.Career,
+Ul.Portfolio{
+    padding: 0;
+    list-style-type: none;
+}
+ul.Education li,
+Ul.Career li,
+Ul.Portfolio li {
+    display: flex;
+}
+
+.Education p,
+.Career p,
+.Portfolio p {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/* ---------- Left Column Container ---------- */
+.Sidebar {
+    grid-area:Sidebar;
+    background: var(--color-tertiary);
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+/*----------Title + picture----------*/
+section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+img.LeftImage {
+    border-radius: 50%;
+    max-width: 80%;
+    border: 5px solid var(--color-tertiary);
+    margin: 0 auto;
+}
+
+/*----------Left information elements----------*/
+
+ul.InfoLists {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.InfoLists li {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+
+}
+
+.InfoLists p {
+margin: 0;
+    padding: 5px;
+}
+
+/*----------Subcontent----------*/
+
+.Content1 h4,
+.Content2 h4,
+.Content3 h4 {
+    margin-left: 10px;
+}
+
+.Content1 p,
+.Content2 p,
+.Content3 p {
+    margin: 0 auto;
+}
+
+.Content1 {
+    grid-area:Content1;
+    background:var(--color-secondary);
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+
+.Content2 {
+    grid-area:Content2;
+    background:var(--color-secondary);
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+}
+.Content3 {
+    grid-area:Content3;
+    background:var(--color-secondary);
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    grid-area:Footer;
+    background:var(--color-Quat);
+    border-radius:var(--main-radius);
+    padding-top: var(--main-padding);
+    display: flex;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+ul.Language {
+    display: flex;
+}
+
+ul.Language li {
+    padding-left:40px;
+}
+
+footer img.FlagIcon {
+    margin: 0 auto;
+    width:40px;
+    height: 30px;
+    border-radius: 60%;
+}
+
+footer img.ContactIcon {
+    margin: 0 auto;
+    width:45px;
+    height: 30px;
+}
+
+/* ----mydog.html---- */
+
+.DogBox {
+    margin: 0 auto;
+}
+img.Dog {
+    margin: 0 auto;
+    min-width: 200%;
+}
+
+
+/* ----portfoliio.html---- */
+
+.PortfolioPage main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+
+.PortfolioPage ul.Portfoliolist {
+    margin: 30;
+    list-style: none;
+}
+
+main img {
+    min-width: 40px;
+}
+
+
+/*---------Responsivenes-----------*/
+@media screen and (max-width: 1174px) {
+    .Container {
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto 1.2fr 1.2fr  auto;
+        grid-template-areas:
+        "Header"
+        "Sidebar"
+        "Main"
+        "Content1"
+        "Content2"
+        "Content3"
+        "Footer";
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer ul {
+        width: 100 vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
